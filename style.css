@@ -1,0 +1,127 @@
+:root {
+    --bg-color: rgb(11, 11, 77);
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-image: url(./images/notebookBG.jpg);
+    background-size: 100% 80%;
+
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr 100px;
+    grid-template-rows: 100px 1fr 1fr 100px;
+    grid-template-areas:
+        "side header header header"
+        "side main main main"
+        "side main main main"
+        "side main main main";
+
+
+}
+
+header {
+    font-family: "Homemade Apple";
+    color: var(--bg-color);
+    font-weight: 100;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    grid-area: header;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+nav a {
+    color: var(--bg-color);
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 0 20px;
+    margin-top: 2em;
+    margin-left: 0.5em;
+
+    font-family: "Homemade Apple";
+    border-radius: 0.8em 0.3em;
+    background: transparent;
+    background-image: linear-gradient(
+      to right,
+      rgba(255, 225, 0, 0.1),
+      rgba(255, 225, 0, 0.7) 4%,
+      rgba(255, 225, 0, 0.3)
+    );
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    grid-area: side;
+    margin-top: 10em;
+    
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-family: "Homemade Apple";
+    font-size: 2.5em;
+    font-weight: 200;
+    color: var(--bg-color);
+    background: linear-gradient(104deg, rgba(130, 255, 173, 0) 0.9%, rgba(130, 255, 173, 1.25) 2.4%, rgba(207, 255, 130, 0.5) 5.8%, rgba(130, 255, 173, 0.1) 93%, rgba(130, 255, 173, 0.7) 96%, rgba(130, 255, 1732, 0) 98%), linear-gradient(183deg, rgba(130, 255, 173, 0) 0%, rgba(130, 255, 173, 0.3) 7.9%, rgba(130, 255, 173, 0) 15%);
+    padding: 0.2em 13.7px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    margin: 0;
+    border-radius: 7.5px;
+    text-shadow: -12px 12px 9.8px rgba(130, 255, 173, 0.7), 21px -18.1px 7.3px rgba(255, 255, 255, 1), -18.1px -27.3px 30px rgba(255, 255, 255, 1);
+
+}
+
+.stain{
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.post {
+    position: absolute;
+    width: 500px;
+    top: 20%;
+    right: 0;
+    transform: rotate(10deg);
+}
+
+.todo{
+    position: absolute;
+   
+    top: 30%;
+    right: 7.3%;
+
+    font-family: "Homemade Apple";
+    z-index: 2;
+    color: var(--bg-color);
+    transform: rotate(10deg);
+}
+
+ul{
+    list-style: none;
+font-size: 1em;
+
+}
+
+ul li {
+    padding-bottom: 1em;
+    font-weight: 200;
+    font-size: 1.2em;
+}
+h2{
+    font-weight: 100;
+    text-decoration: underline;
+}
+
